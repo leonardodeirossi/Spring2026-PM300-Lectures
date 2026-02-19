@@ -1,0 +1,65 @@
+\documentclass[
+    notheorems,
+    11pt,
+    compress,
+    aspectratio=169
+]{beamer}
+
+\mode<presentation>{
+    \usetheme{Madrid}
+    \usecolortheme{orchid}
+    \usefonttheme[onlymath]{serif}
+    \setbeamertemplate{blocks}[rounded][shadow=true]
+    \setbeamertemplate{navigation symbols}{}
+    \setbeamertemplate{enumerate items}[square]
+}
+
+\usepackage{config}
+\graphicspath{{./figures/}}
+\usepackage{minted}
+\setminted[php]{
+    fontsize=\scriptsize,
+    linenos,
+    breaklines,
+    frame=single,
+    startinline=true % This allows highlighting even without <?php tags
+}
+% -----
+
+\title[Agile Methodology]{Agile Methodology}
+\author{prof. Leonardo Essam Dei Rossi}
+\institute[]{ITT "M. Buonarroti" - Trento (TN)}
+\date[A.S. 2025/2026]{Anno scolastico 2025/2026}
+
+% -----
+
+\begin{document}
+
+\setlength{\baselineskip}{15pt}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+    \frametitle{Indice}
+
+    \tableofcontents
+\end{frame}
+
+% -----
+
+% -----
+
+\begin{frame}
+\frametitle{Riferimenti e approfondimenti}
+\footnotesize{
+    \begin{thebibliography}{99}
+        % \bibitem[Cos'è l'SQL injection?. Cloudflare, N/A]{Reference01} Cloudflare. Cos'è l'SQL injection?. \emph{Centro di apprendimento}, N/A. \href{https://www.cloudflare.com/it-it/learning/security/threats/sql-injection/}{(link)}
+    \end{thebibliography}
+}
+\end{frame}
+
+% -----
+
+\end{document}
