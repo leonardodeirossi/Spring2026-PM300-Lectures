@@ -1,0 +1,353 @@
+\documentclass[
+    notheorems,
+    11pt,
+    compress,
+    aspectratio=169
+]{beamer}
+
+\mode<presentation>{
+    \usetheme{Madrid}
+    \usecolortheme{orchid}
+    \usefonttheme[onlymath]{serif}
+    \setbeamertemplate{blocks}[rounded][shadow=true]
+    \setbeamertemplate{navigation symbols}{}
+    \setbeamertemplate{enumerate items}[square]
+}
+
+\usepackage{config}
+\graphicspath{{./figures/}}
+\usepackage{minted}
+\setminted[php]{
+    fontsize=\scriptsize,
+    linenos,
+    breaklines,
+    frame=single,
+    startinline=true % This allows highlighting even without <?php tags
+}
+% -----
+
+\title[Waterfall Methodology]{Waterfall Methodology}
+\author{prof. Leonardo Essam Dei Rossi}
+\institute[]{ITT "M. Buonarroti" - Trento (TN)}
+\date[A.S. 2025/2026]{Anno scolastico 2025/2026}
+
+% -----
+
+\begin{document}
+
+\setlength{\baselineskip}{15pt}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+    \frametitle{Indice}
+
+    \tableofcontents
+\end{frame}
+
+% -----
+
+\section{Introduction}
+
+\subsection{Key Takeaways}
+
+\begin{frame}{Key Takeaways}
+    \begin{itemize}
+        \item Waterfall methodology is a linear, sequential project management approach with distinct phases and rigid progression;
+        \pause
+        \item It works well with projects that have well defined requirements and predictable outcomes but lacks flexibility for change;
+        \pause
+        \item Waterfall’s strengths include clear structure, documentation, and upfront planning, but it can struggle with innovation and feedback;
+        \pause
+        \item Choose waterfall for projects with fixed requirements.
+    \end{itemize}
+\end{frame}
+
+% -----
+
+\subsection{What is the Waterfall methodology?}
+
+\begin{frame}{What is the Waterfall methodology? (1)}
+    \textbf{Waterfall methodology is a well-established project management workflow}.
+    \\
+    Like a waterfall, each process phase cascades downward sequentially through \textbf{five stages} (requirements, design, implementation, verification, and maintenance).
+
+    \pause
+    \vspace{0.5cm}
+
+    The methodology comes from computer scientist Winston Royce’s 1970 research paper on software development. Although Royce never named this model "waterfall", he gets credit for creating a linear, rigorous project management system.
+
+    \vfill
+
+    \textbf{Approfondimento:} \cite{Reference01}
+\end{frame}
+
+\begin{frame}{What is the Waterfall methodology? (2)}
+    \textbf{Unlike other methods, such as the Agile methodology, Waterfall doesn’t allow flexibility.}
+
+    \pause
+    \vspace{0.5cm}
+
+    You must finish one phase before beginning the next. Your team can’t move forward until they resolve any problems. Moreover, as our introduction to project management guide outlines, your team can’t address bugs or technical debt if it’s already moved on to the next project phase.
+\end{frame}
+
+% -----
+
+\section{Stages of the Waterfall}
+
+\subsection{Stage \#1: Requirements}
+
+\begin{frame}{Stage \#1: Requirements (1)}
+    \textbf{The requirements phase states what the system should do.}
+    \\
+    At this stage, you determine the project’s scope, from business obligations to user needs. This gives you a 30,000-foot overview of the entire project.
+
+    \pause
+    \vfill
+
+    The requirements should specify:
+
+    \begin{itemize}
+        \item Resources required for the project;
+        \item What each team member will work on and at what stage;
+        \item A timeline for the entire project, outlining how long each stage will take;
+        \item Details on each stage of the process.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Stage \#1: Requirements (2)}
+    But these requirements \textit{“may range from very abstract to a detailed mathematical specification,”} writes Steven Zeil, professor of computer science at Old Dominion University.
+
+    \pause
+    \vspace{0.5cm}
+
+    \textbf{That’s because requirements might not outline an exact implementation, and that’s something development addresses in later stages.}
+\end{frame}
+
+% -----
+
+\subsection{Stage \#2: Design}
+
+\begin{frame}{Stage \#2: Design (1)}
+    After gathering all the requirements, it’s time to move on to the design stage.
+
+    \pause
+    \vspace{0.25cm}
+
+    \textbf{Here, designers develop solutions that meet the requirements.}
+
+    \pause
+    \vspace{0.5cm}
+
+    In this stage, designers:
+
+    \begin{itemize}
+        \item Create schedules and project milestones;
+        \item Determine the exact deliverables;
+        \item Create designs and/or blueprints for deliverables.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Stage \#2: Design (2)}
+    Deliverables could include software or they could consist of a physical product. For instance, designers determine the system architecture and use cases for software. For a physical product, they figure out its exact specifications for production.
+\end{frame}
+
+% -----
+
+\subsection{Stage \#3: Implementation}
+
+\begin{frame}{Stage \#3: Implementation}
+    \textbf{Once the design is finalized and approved, it’s time to implement it.}
+
+    Design hands off their specifications to developers to build.
+
+    \pause
+    \vspace{0.5cm}
+
+    To accomplish this, developers:
+
+    \begin{itemize}
+        \item Create an implementation plan;
+        \item Collect any data or research needed for the build;
+        \item Assign specific tasks and allocate resources among the team.
+    \end{itemize}
+
+    \pause
+    \vspace{0.5cm}
+
+    Here is where you might even find out that parts of the design that can’t be implemented.
+    \textbf{If it’s a huge issue, you must step back and re-enter the design phase.}
+\end{frame}
+
+% -----
+
+\subsection{Stage \#4: Verification}
+
+\begin{frame}{Stage \#4: Verification}
+    \textbf{After the developers code the design, it’s time for Quality Assurance (QA).}
+
+    It’s important to test for all use cases to ensure a good user experience. That’s because you don’t want to release a buggy product to customers.
+
+    \pause
+    \vfill
+
+    QA also:
+
+    \begin{itemize}
+        \item Writes test cases;
+        \item Documents any bugs and errors to be fixed;
+        \item Tests one aspect at a time;
+        \item Determines which QA metrics to track;
+        \item Covers a variety of use case scenarios and environments.
+    \end{itemize}
+\end{frame}
+
+% -----
+
+\subsection{Stage \#5: Maintenance}
+
+\begin{frame}{Stage \#5: Maintenance}
+    After the product release, devs might have to squash bugs. Customers let your support staff know of any issues that come up. Then, it’s up to the team to address those requests and release newer versions of your product.
+
+    \pause
+    \vfill
+
+    As you can see, each stage depends on the one that comes before it. It doesn’t allow for much error between or within phases.
+
+    \pause
+    \vfill
+
+    For example, if a stakeholder wants to add a requirement when you’re in the verification phase, you’ll have to re-examine the entirety of your project. That could mean tossing the whole thing out and starting over.
+\end{frame}
+
+% -----
+
+\section{Benefits of Waterfall methodology}
+
+\begin{frame}{Benefits of Waterfall methodology (1)}
+    The benefits of Waterfall methodology have made it a lasting workflow for projects that rely on a fixed outcome. A 2020 survey found that 56\% of project professionals had used traditional, or Waterfall, models in the previous year.
+
+    \pause
+    \vfill
+
+    A few benefits of Waterfall planning include:
+
+    \begin{block}{Clear project structure}
+        Waterfall leaves little room for confusion because of rigorous planning. There is a clear end goal in sight that you’re working toward.
+    \end{block}
+\end{frame}
+
+\begin{frame}{Benefits of Waterfall methodology (2)}
+    \begin{block}{Set costs}
+        The rigorous planning ensures that the time and cost of the project are known upfront.
+    \end{block}
+
+    \pause
+    \vfill
+
+    \begin{block}{Easier tracking}
+        Assessing progress is faster because there is less cross-functional work.
+    \end{block}
+
+    \pause
+    \vfill
+
+    \begin{block}{A replicable process}
+        If a project succeeds, you can use the process again for another project with similar requirements.
+    \end{block}
+\end{frame}
+
+\begin{frame}{Benefits of Waterfall methodology (3)}
+    \begin{block}{Comprehensive project documentation}
+        The Waterfall methodology provides you with a blueprint and a historical project record so you can have a comprehensive overview of a project.
+    \end{block}
+
+    \pause
+    \vfill
+
+    \begin{block}{Improved risk management}
+        The abundance of upfront planning reduces risk. It allows developers to catch design problems before writing any code.
+    \end{block}
+\end{frame}
+
+\begin{frame}{Benefits of Waterfall methodology (4)}
+    \begin{block}{Enhanced responsibility and accountability}
+        Teams take responsibility within each process phase. Each phase has a clear set of goals, milestones, and timelines.
+    \end{block}
+
+    \pause
+    \vfill
+    
+    \begin{block}{More precise execution for a non-expert workforce}
+        Waterfall allows less-experienced team members to plug into the process.
+    \end{block}
+
+    \pause
+    \vfill
+
+    \begin{block}{Fewer delays because of additional requirements}
+        Since your team knows the needs upfront, there isn’t a chance for additional asks from stakeholders or customers.
+    \end{block}
+\end{frame}
+
+% -----
+
+\section{Limitations of Waterfall methodology}
+
+\begin{frame}{Limitations of Waterfall methodology (1)}
+    Waterfall isn’t without its limitations, which is why many product teams opt for an Agile methodology. The Waterfall method works wonders for predictable projects but falls apart on a project with many variables and unknowns.
+
+    \pause
+    \vspace{0.5cm}
+
+    Let’s look at some other limitations of Waterfall planning:
+
+    \begin{block}{Longer delivery times}
+        The delivery of the final product could take longer than usual because of the inflexible step-by-step process, unlike in an iterative process like Agile or Lean.
+    \end{block}
+\end{frame}
+
+\begin{frame}{Limitations of Waterfall methodology (2)}
+    \begin{block}{Limited flexibility for innovation}
+        Any unexpected occurrence can spell doom for a project with this model. One issue could move the project two steps back.
+    \end{block}
+
+    \pause
+    \vfill
+
+    \begin{block}{Limited opportunities for client feedback}
+        Once the requirement phase is complete, the project is out of the hands of the client.
+    \end{block}
+\end{frame}
+
+\begin{frame}{Limitations of Waterfall methodology (3)}
+    \begin{block}{Tons of feature requests}
+        Because clients have little say during the project’s execution, there can be a lot of change requests after launch, such as addition of new features to the existing code. This can create further maintenance issues and prolong the launch.
+    \end{block}
+
+    \pause
+    \vfill
+
+    \begin{block}{Deadline creep}
+        If there’s a significant issue in one phase, everything grinds to a halt. Nothing can move forward until the team addresses the problem. It may even require you to go back to a previous phase to address the issue.
+    \end{block}
+\end{frame}
+
+% -----
+
+\begin{frame}
+\frametitle{Riferimenti e approfondimenti}
+\footnotesize{
+    \begin{thebibliography}{99}
+        % \bibitem[Creating Agile workflows for enhanced project management. Atlassian, N/A]{Reference01} Atlassian. Creating Agile workflows for enhanced project management. \emph{atlassian.com}, N/A. \href{https://www.atlassian.com/agile/project-management/workflow}{(link)}
+
+        \bibitem[Waterfall Methodology: A Comprehensive Guide. Atlassian, N/A]{Reference01} Atlassian. Waterfall Methodology: A Comprehensive Guide. \emph{atlassian.com}, N/A. \href{https://www.atlassian.com/agile/project-management/waterfall-methodology}{(link)}
+    \end{thebibliography}
+}
+\end{frame}
+
+% -----
+
+\end{document}
