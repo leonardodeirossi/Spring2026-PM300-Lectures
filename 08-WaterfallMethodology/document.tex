@@ -15,18 +15,14 @@
 }
 
 \usepackage{config}
+
 \graphicspath{{./figures/}}
-\usepackage{minted}
-\setminted[php]{
-    fontsize=\scriptsize,
-    linenos,
-    breaklines,
-    frame=single,
-    startinline=true % This allows highlighting even without <?php tags
-}
+\bibliography{bibliography.bib}
+
 % -----
 
-\title[Waterfall Methodology]{Waterfall Methodology}
+\title[Waterfall Methodology]{Software development methodologies}
+\subtitle{Waterfall Methodology}
 \author{prof. Leonardo Essam Dei Rossi}
 \institute[]{ITT "M. Buonarroti" - Trento (TN)}
 \date[A.S. 2025/2026]{Anno scolastico 2025/2026}
@@ -75,20 +71,20 @@
     Like a waterfall, each process phase cascades downward sequentially through \textbf{five stages} (requirements, design, implementation, verification, and maintenance).
 
     \pause
-    \vspace{0.5cm}
+    \vspace{\baselineskip}
 
     The methodology comes from computer scientist Winston Royce’s 1970 research paper on software development. Although Royce never named this model "waterfall", he gets credit for creating a linear, rigorous project management system.
 
     \vfill
 
-    \textbf{Approfondimento:} \cite{Reference01}
+    \textbf{Approfondimento:} \cite{atlassian:waterfall}
 \end{frame}
 
 \begin{frame}{What is the Waterfall methodology? (2)}
     \textbf{Unlike other methods, such as the Agile methodology, Waterfall doesn’t allow flexibility.}
 
     \pause
-    \vspace{0.5cm}
+    \vspace{\baselineskip}
 
     You must finish one phase before beginning the next. Your team can’t move forward until they resolve any problems. Moreover, as our introduction to project management guide outlines, your team can’t address bugs or technical debt if it’s already moved on to the next project phase.
 \end{frame}
@@ -121,7 +117,7 @@
     But these requirements \textit{“may range from very abstract to a detailed mathematical specification,”} writes Steven Zeil, professor of computer science at Old Dominion University.
 
     \pause
-    \vspace{0.5cm}
+    \vspace{\baselineskip}
 
     \textbf{That’s because requirements might not outline an exact implementation, and that’s something development addresses in later stages.}
 \end{frame}
@@ -133,13 +129,10 @@
 \begin{frame}{Stage \#2: Design (1)}
     After gathering all the requirements, it’s time to move on to the design stage.
 
-    \pause
-    \vspace{0.25cm}
-
     \textbf{Here, designers develop solutions that meet the requirements.}
 
     \pause
-    \vspace{0.5cm}
+    \vspace{\baselineskip}
 
     In this stage, designers:
 
@@ -164,7 +157,7 @@
     Design hands off their specifications to developers to build.
 
     \pause
-    \vspace{0.5cm}
+    \vspace{\baselineskip}
 
     To accomplish this, developers:
 
@@ -175,7 +168,7 @@
     \end{itemize}
 
     \pause
-    \vspace{0.5cm}
+    \vspace{\baselineskip}
 
     Here is where you might even find out that parts of the design that can’t be implemented.
     \textbf{If it’s a huge issue, you must step back and re-enter the design phase.}
@@ -300,7 +293,7 @@
     Waterfall isn’t without its limitations, which is why many product teams opt for an Agile methodology. The Waterfall method works wonders for predictable projects but falls apart on a project with many variables and unknowns.
 
     \pause
-    \vspace{0.5cm}
+    \vspace{\baselineskip}
 
     Let’s look at some other limitations of Waterfall planning:
 
@@ -337,15 +330,8 @@
 
 % -----
 
-\begin{frame}
-\frametitle{Riferimenti e approfondimenti}
-\footnotesize{
-    \begin{thebibliography}{99}
-        % \bibitem[Creating Agile workflows for enhanced project management. Atlassian, N/A]{Reference01} Atlassian. Creating Agile workflows for enhanced project management. \emph{atlassian.com}, N/A. \href{https://www.atlassian.com/agile/project-management/workflow}{(link)}
-
-        \bibitem[Waterfall Methodology: A Comprehensive Guide. Atlassian, N/A]{Reference01} Atlassian. Waterfall Methodology: A Comprehensive Guide. \emph{atlassian.com}, N/A. \href{https://www.atlassian.com/agile/project-management/waterfall-methodology}{(link)}
-    \end{thebibliography}
-}
+\begin{frame}{Riferimenti e approfondimenti}
+    \printbibliography
 \end{frame}
 
 % -----

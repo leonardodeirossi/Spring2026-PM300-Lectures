@@ -12,6 +12,16 @@
 \usepackage{mathtools}
 \usepackage{tikz}
 \usepackage{svg}
+\usepackage{minted}
+\usepackage{tabularx}
+
+\usepackage{booktabs}
+\usepackage{bibentry}
+\usepackage[backend=biber,style=ieee, citestyle=numeric]{biblatex}
+\usepackage{csquotes}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning}
 
 \newcolumntype{P}[1]{>{\centering \arraybackslash}p{#1}}
 \newcolumntype{L}{X}
@@ -55,3 +65,11 @@
 }
 
 \setbeamercovered{transparent}
+
+\setminted[php]{
+    fontsize=\scriptsize,
+    linenos,
+    breaklines,
+    frame=single,
+    startinline=true
+}
